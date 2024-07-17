@@ -1,5 +1,6 @@
 import {Category} from './categoryTypes';
 import {FilteredMealRecipe} from './filterRecipeTypes';
+import {RecipeWithArea} from './filterRecipeWithArea';
 import {Recipe} from './randomRecipetypes';
 import {mealRecipe} from './recipeDetailsIDTypes';
 
@@ -23,8 +24,13 @@ export type FilterRecipeResponse = {
   meals: FilteredMealRecipe[];
 };
 
+export interface FilterRecipeResponseWithArea {
+  meals: RecipeWithArea[];
+}
+
 // types/index.ts
 export * from './randomRecipetypes';
 export * from './recipeDetailsIDTypes';
 export * from './categoryTypes';
 export * from './filterRecipeTypes';
+export * from './filterRecipeWithArea';

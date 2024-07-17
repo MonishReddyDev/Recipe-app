@@ -3,6 +3,7 @@ import {createApi, fetchBaseQuery} from '@reduxjs/toolkit/query/react';
 import {
   CategoriesResponse,
   FilterRecipeResponse,
+  FilterRecipeResponseWithArea,
   RandomRecipeResponse,
   RecipeDetailsIDResponse,
 } from '../types';
@@ -25,6 +26,9 @@ const RecipeApi = createApi({
     getFilterRecipes: builder.query<FilterRecipeResponse, string>({
       query: category => `filter.php?c=${category}`,
     }),
+    getRecipesByArea: builder.query<FilterRecipeResponseWithArea, string>({
+      query: country => `filter.php?a=${country}`,
+    }),
   }),
 });
 
@@ -33,5 +37,6 @@ export const {
   useGetRecipeDetailsWithIdQuery,
   useGetCategoriesQuery,
   useGetFilterRecipesQuery,
+  useGetRecipesByAreaQuery,
 } = RecipeApi;
 export default RecipeApi;

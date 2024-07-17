@@ -1,5 +1,5 @@
 import {View, Text, TextInput, StyleSheet} from 'react-native';
-import React from 'react';
+import React, {memo} from 'react';
 import theme from '../theme';
 import {moderateScale} from 'react-native-size-matters';
 
@@ -28,4 +28,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default SearchBar;
+export default memo(SearchBar);

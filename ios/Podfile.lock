@@ -949,7 +949,30 @@ PODS:
   - React-Mapbuffer (0.74.3):
     - glog
     - React-debug
+  - react-native-blur (4.4.0):
+    - DoubleConversion
+    - glog
+    - hermes-engine
+    - RCT-Folly (= 2024.01.01.00)
+    - RCTRequired
+    - RCTTypeSafety
+    - React-Codegen
+    - React-Core
+    - React-debug
+    - React-Fabric
+    - React-featureflags
+    - React-graphics
+    - React-ImageManager
+    - React-NativeModulesApple
+    - React-RCTFabric
+    - React-rendererdebug
+    - React-utils
+    - ReactCommon/turbomodule/bridging
+    - ReactCommon/turbomodule/core
+    - Yoga
   - react-native-safe-area-context (4.10.8):
+    - React-Core
+  - react-native-splash-screen (3.3.0):
     - React-Core
   - React-nativeconfig (0.74.3)
   - React-NativeModulesApple (0.74.3):
@@ -1180,12 +1203,35 @@ PODS:
     - React-logger (= 0.74.3)
     - React-perflogger (= 0.74.3)
     - React-utils (= 0.74.3)
+  - RNCAsyncStorage (1.24.0):
+    - React-Core
   - RNCMaskedView (0.3.1):
     - React-Core
   - RNFastImage (8.6.3):
     - React-Core
     - SDWebImage (~> 5.11.1)
     - SDWebImageWebPCoder (~> 0.8.4)
+  - RNFlashList (1.7.0):
+    - DoubleConversion
+    - glog
+    - hermes-engine
+    - RCT-Folly (= 2024.01.01.00)
+    - RCTRequired
+    - RCTTypeSafety
+    - React-Codegen
+    - React-Core
+    - React-debug
+    - React-Fabric
+    - React-featureflags
+    - React-graphics
+    - React-ImageManager
+    - React-NativeModulesApple
+    - React-RCTFabric
+    - React-rendererdebug
+    - React-utils
+    - ReactCommon/turbomodule/bridging
+    - ReactCommon/turbomodule/core
+    - Yoga
   - RNGestureHandler (2.17.1):
     - DoubleConversion
     - glog
@@ -1250,6 +1296,8 @@ PODS:
     - ReactCommon/turbomodule/bridging
     - ReactCommon/turbomodule/core
     - Yoga
+  - RNSharedElement (0.8.9):
+    - React-Core
   - SDWebImage (5.11.1):
     - SDWebImage/Core (= 5.11.1)
   - SDWebImage/Core (5.11.1)
@@ -1293,7 +1341,9 @@ DEPENDENCIES:
   - React-jsitracing (from `../node_modules/react-native/ReactCommon/hermes/executor/`)
   - React-logger (from `../node_modules/react-native/ReactCommon/logger`)
   - React-Mapbuffer (from `../node_modules/react-native/ReactCommon`)
+  - "react-native-blur (from `../node_modules/@react-native-community/blur`)"
   - react-native-safe-area-context (from `../node_modules/react-native-safe-area-context`)
+  - react-native-splash-screen (from `../node_modules/react-native-splash-screen`)
   - React-nativeconfig (from `../node_modules/react-native/ReactCommon`)
   - React-NativeModulesApple (from `../node_modules/react-native/ReactCommon/react/nativemodule/core/platform/ios`)
   - React-perflogger (from `../node_modules/react-native/ReactCommon/reactperflogger`)
@@ -1317,11 +1367,14 @@ DEPENDENCIES:
   - React-runtimescheduler (from `../node_modules/react-native/ReactCommon/react/renderer/runtimescheduler`)
   - React-utils (from `../node_modules/react-native/ReactCommon/react/utils`)
   - ReactCommon/turbomodule/core (from `../node_modules/react-native/ReactCommon`)
+  - "RNCAsyncStorage (from `../node_modules/@react-native-async-storage/async-storage`)"
   - "RNCMaskedView (from `../node_modules/@react-native-masked-view/masked-view`)"
   - RNFastImage (from `../node_modules/react-native-fast-image`)
+  - "RNFlashList (from `../node_modules/@shopify/flash-list`)"
   - RNGestureHandler (from `../node_modules/react-native-gesture-handler`)
   - RNReanimated (from `../node_modules/react-native-reanimated`)
   - RNScreens (from `../node_modules/react-native-screens`)
+  - RNSharedElement (from `../node_modules/react-native-shared-element`)
   - Yoga (from `../node_modules/react-native/ReactCommon/yoga`)
 
 SPEC REPOS:
@@ -1395,8 +1448,12 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/ReactCommon/logger"
   React-Mapbuffer:
     :path: "../node_modules/react-native/ReactCommon"
+  react-native-blur:
+    :path: "../node_modules/@react-native-community/blur"
   react-native-safe-area-context:
     :path: "../node_modules/react-native-safe-area-context"
+  react-native-splash-screen:
+    :path: "../node_modules/react-native-splash-screen"
   React-nativeconfig:
     :path: "../node_modules/react-native/ReactCommon"
   React-NativeModulesApple:
@@ -1443,16 +1500,22 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/ReactCommon/react/utils"
   ReactCommon:
     :path: "../node_modules/react-native/ReactCommon"
+  RNCAsyncStorage:
+    :path: "../node_modules/@react-native-async-storage/async-storage"
   RNCMaskedView:
     :path: "../node_modules/@react-native-masked-view/masked-view"
   RNFastImage:
     :path: "../node_modules/react-native-fast-image"
+  RNFlashList:
+    :path: "../node_modules/@shopify/flash-list"
   RNGestureHandler:
     :path: "../node_modules/react-native-gesture-handler"
   RNReanimated:
     :path: "../node_modules/react-native-reanimated"
   RNScreens:
     :path: "../node_modules/react-native-screens"
+  RNSharedElement:
+    :path: "../node_modules/react-native-shared-element"
   Yoga:
     :path: "../node_modules/react-native/ReactCommon/yoga"
 
@@ -1489,7 +1552,9 @@ SPEC CHECKSUMS:
   React-jsitracing: 6b3c8c98313642140530f93c46f5a6ca4530b446
   React-logger: fa92ba4d3a5d39ac450f59be2a3cec7b099f0304
   React-Mapbuffer: 9f68550e7c6839d01411ac8896aea5c868eff63a
+  react-native-blur: a2acf22fd7bd13621df5e0b1c130b81adea7009c
   react-native-safe-area-context: b7daa1a8df36095a032dff095a1ea8963cb48371
+  react-native-splash-screen: 4312f786b13a81b5169ef346d76d33bc0c6dc457
   React-nativeconfig: fa5de9d8f4dbd5917358f8ad3ad1e08762f01dcb
   React-NativeModulesApple: 585d1b78e0597de364d259cb56007052d0bda5e5
   React-perflogger: 7bb9ba49435ff66b666e7966ee10082508a203e8
@@ -1513,11 +1578,14 @@ SPEC CHECKSUMS:
   React-runtimescheduler: 0c80752bceb80924cb8a4babc2a8e3ed70d41e87
   React-utils: a06061b3887c702235d2dac92dacbd93e1ea079e
   ReactCommon: f00e436b3925a7ae44dfa294b43ef360fbd8ccc4
+  RNCAsyncStorage: ec53e44dc3e75b44aa2a9f37618a49c3bc080a7a
   RNCMaskedView: 090213d32d8b3bb83a4dcb7d12c18f0152591906
   RNFastImage: 5c9c9fed9c076e521b3f509fe79e790418a544e8
+  RNFlashList: e9b57a5553639f9b528cc50ab53f25831722ed62
   RNGestureHandler: 8dbcccada4a7e702e7dec9338c251b1cf393c960
   RNReanimated: f4ff116e33e0afc3d127f70efe928847c7c66355
   RNScreens: 5aeecbb09aa7285379b6e9f3c8a3c859bb16401c
+  RNSharedElement: 3fd05877bd6bc95f71b332801bf4356ca69ab7f6
   SDWebImage: a7f831e1a65eb5e285e3fb046a23fcfbf08e696d
   SDWebImageWebPCoder: 908b83b6adda48effe7667cd2b7f78c897e5111d
   SocketRocket: abac6f5de4d4d62d24e11868d7a2f427e0ef940d

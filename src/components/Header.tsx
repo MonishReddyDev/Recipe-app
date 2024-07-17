@@ -1,5 +1,5 @@
 import {View, Text, StyleSheet, Image} from 'react-native';
-import React from 'react';
+import React, {memo} from 'react';
 import {moderateScale, scale} from 'react-native-size-matters';
 import theme from '../theme';
 import images from '../theme/images';
@@ -45,4 +45,4 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
 });
-export default Header;
+export default memo(Header);
