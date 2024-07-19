@@ -25,6 +25,7 @@ const query = getRandomAreatoday;
 const TrendingRecipesList = () => {
   const {data, isLoading, isFetching, isError} =
     useGetRecipesByAreaQuery(query);
+
   const recipesData: RecipeWithArea[] = data?.meals ?? [];
 
   const renderItem: ListRenderItem<RecipeWithArea> = useCallback(
@@ -53,6 +54,8 @@ const TrendingRecipesList = () => {
     </View>;
   }
 
+
+  
   return (
     <>
       <Text style={styles.headingHext}>Trending Recipes</Text>

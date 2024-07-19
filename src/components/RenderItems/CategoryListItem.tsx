@@ -11,8 +11,7 @@ import theme from '../../theme';
 import Animated, {FadeInDown} from 'react-native-reanimated';
 import {moderateScale, scale} from 'react-native-size-matters';
 
-
-const CategoryListItem = ({item}: any) => {
+const CategoryListItem = ({item, onpress}: any) => {
   const scaleValue = useRef(new animated.Value(1)).current;
   const handlePressIn = () => {
     animated
@@ -42,6 +41,7 @@ const CategoryListItem = ({item}: any) => {
         alignItems: 'center',
       }}>
       <TouchableOpacity
+        onPress={() => onpress(item)}
         activeOpacity={0.9}
         onPressIn={handlePressIn}
         onPressOut={handlePressOut}

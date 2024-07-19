@@ -5,6 +5,7 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 
 const Home = lazy(() => import('../screens/Home'));
 const RecipeScreen = lazy(() => import('../screens/RecipeScreen'));
+const RecipesCategory = lazy(() => import('../screens/RecipesCategory'));
 const Stack = createNativeStackNavigator();
 
 const StackNavigation = () => {
@@ -29,6 +30,13 @@ const StackNavigation = () => {
       <Stack.Screen
         name={NavigationStrings.RECIPESCREEN}
         component={RecipeScreen}
+        options={{
+          headerShown: false,
+        }}
+      />
+      <Stack.Screen
+        name={NavigationStrings.RECIPECAYEGORY}
+        component={RecipesCategory}
         options={{
           headerShown: false,
         }}

@@ -7,9 +7,7 @@ const IngridentsItem = ({ingredient, measurement}: any) => {
   return (
     <View style={styles.container}>
       <Image style={styles.image} source={images.start_Icon} />
-
       <Text style={[styles.text]}>{ingredient}</Text>
-
       <Text style={styles.measureText}>{measurement}</Text>
     </View>
   );
